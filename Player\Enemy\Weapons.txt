@@ -1,0 +1,14 @@
+Player:
+First Person
+
+Enemies:
+  Fried Rice
+
+
+Weapons:
+Cans of Beans
+  Pinto
+  Garbanzo
+  Green
+  
+  
