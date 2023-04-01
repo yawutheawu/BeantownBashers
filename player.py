@@ -30,6 +30,7 @@ class Player:
             dx += -speed_cos
             dy += speed_sin
 
+        #wall physik
         self.check_wall_collision(dx,dy)
 
         if keys[pg.K_LEFT]:
