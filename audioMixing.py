@@ -3,7 +3,7 @@ import time
 import beatTimer
 import beatMaps
 
-
+#song is "fileName.mp3"
 def playFile(song):
     pygame.mixer.init()
     map = beatMaps.getSong(song)
@@ -25,10 +25,4 @@ def playFile(song):
                 return False
             index += 1
     return True
-
-
-if playFile("reg_enemy.mp3"):
-    print("Good Job")
-else:
-    print("Failed")
 
