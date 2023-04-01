@@ -10,6 +10,7 @@ from object_handler import *
 from weapon import *
 from sound import *
 from pathfinding import *
+import keyboard
 import audioMixing
 
 
@@ -24,6 +25,8 @@ class Game:
         self.global_trigger = False
         self.global_event = pg.USEREVENT + 0
         pg.time.set_timer(self.global_event, 40)
+        logo = pg.image.load('graphics/Logo.png')
+        pg.display.set_icon(logo)
         self.new_game()
 
     def new_game(self):
