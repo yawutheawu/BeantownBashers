@@ -1,6 +1,7 @@
 import audioMixing
 import beatTimer
 from settings import *
+import playSongNoBeatMap
 import pygame as pg
 import math
 
@@ -32,7 +33,8 @@ class Player:
         if self.health < 1:
             self.game.object_renderer.game_over()
             pg.display.flip()
-            pg.time.delay(1500)
+            playSongNoBeatMap.playFile("resources/sound/wahwah.mp3")
+            pg.time.delay(2000)
             self.game.new_game()
 
     def get_damage(self, damage):
