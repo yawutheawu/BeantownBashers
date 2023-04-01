@@ -4,6 +4,9 @@ import beatTimer
 import beatMaps
 
 #song is "fileName.mp3"
+
+#when you want to play music in sync to shooting beans type in code when you want to do that action: audioMixing.playFile("name.mp3"))
+
 def playFile(song):
     pygame.mixer.init()
     map = beatMaps.getSong(song)
