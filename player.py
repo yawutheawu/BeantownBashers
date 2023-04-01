@@ -33,7 +33,7 @@ class Player:
         if self.health < 1:
             self.game.object_renderer.game_over()
             pg.display.flip()
-            playSongNoBeatMap.playFile("resources/sound/wahwah.mp3")
+            playSongNoBeatMap.play("resources/sound/wahwah.mp3")
             pg.time.delay(2000)
             self.game.new_game()
 
