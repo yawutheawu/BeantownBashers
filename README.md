@@ -1,4 +1,4 @@
-# BeantownBashers
+# Rice and Beans
 we beantownin and we bashin
 
-who knows what we doin it aint even 8:30 yet
+Boomer rhythm shooter made for the beantown bash hackathon 4/1/2023
