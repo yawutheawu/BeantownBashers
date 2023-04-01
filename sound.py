@@ -10,7 +10,7 @@ class Sound:
         self.npc_pain = pg.mixer.Sound(self.path + 'npc_pain.mp3')
         self.npc_death = pg.mixer.Sound(self.path + 'npc_death.mp3')
         self.npc_shot = pg.mixer.Sound(self.path + 'npc_attack.mp3')
-        self.npc_shot.set_volume(0.25)
+        self.npc_shot.set_volume(0.4)
         self.player_pain = pg.mixer.Sound(self.path + 'player_pain.mp3')
         self.Reg = pg.mixer.music.load(self.path + 'reg.mp3')
         self.Boss = pg.mixer.music.load(self.path + 'boss.mp3')
