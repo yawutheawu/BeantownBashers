@@ -13,7 +13,7 @@ def getGlobalTime():
 
 def playFile(song):
     pygame.mixer.init()
-    pygame.mixer.music.load(name)
+    pygame.mixer.music.load(song)
     pygame.mixer.music.set_volume(0.5)
     pygame.mixer.music.play()
     map = beatMaps.getSong(song)
