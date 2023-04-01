@@ -1,4 +1,7 @@
 import pygame
+import time
+from mutagen.mp3 import MP3
+import keyboard
 
 def play(name):
     pygame.mixer.init()
