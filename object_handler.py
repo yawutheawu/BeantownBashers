@@ -23,8 +23,8 @@ class ObjectHandler:
         self.spawn_npc()
 
         # sprite map
-        add_sprite(AnimatedSprite(game))
-        add_sprite(AnimatedSprite(game, pos=(1.5, 1.5)))
+        #add_sprite(AnimatedSprite(game))
+        '''add_sprite(AnimatedSprite(game, pos=(1.5, 1.5)))
         add_sprite(AnimatedSprite(game, pos=(1.5, 7.5)))
         add_sprite(AnimatedSprite(game, pos=(5.5, 3.25)))
         add_sprite(AnimatedSprite(game, pos=(5.5, 4.75)))
@@ -44,7 +44,7 @@ class ObjectHandler:
         add_sprite(AnimatedSprite(game, pos=(14.5, 24.5)))
         add_sprite(AnimatedSprite(game, pos=(14.5, 30.5)))
         add_sprite(AnimatedSprite(game, pos=(1.5, 30.5)))
-        add_sprite(AnimatedSprite(game, pos=(1.5, 24.5)))
+        add_sprite(AnimatedSprite(game, pos=(1.5, 24.5)))'''
 
         # npc map
         # add_npc(SoldierNPC(game, pos=(11.0, 19.0)))
