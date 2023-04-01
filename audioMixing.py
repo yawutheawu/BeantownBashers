@@ -12,8 +12,13 @@ def playFile(song):
     pygame.mixer.music.play()
     begin = int(time.time() * 1000)
     length = map[0][-1]
+    final = begin + length
     index = 0
     for i in range(0, length):
+        if(begin >= final):
+            begin = int(time.time() * 1000)
+            final = begin + length
+            pygame.mixer.music.play()
         print(i)
         if i in map[0]:
             hit = beatTimer.inputBeat(map[1][0], (0.353*3))
@@ -25,4 +30,6 @@ def playFile(song):
                 return False
             index += 1
     return True
+
+x = playFile("reg_enemy.mp3")
 
