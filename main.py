@@ -10,6 +10,7 @@ from object_handler import *
 from weapon import *
 from sound import *
 from pathfinding import *
+import audioMixing
 
 
 class Game:
@@ -34,7 +35,7 @@ class Game:
         self.weapon = Weapon(self)
         self.sound = Sound(self)
         self.pathfinding = PathFinding(self)
-        pg.mixer.music.play(-1)
+        audioMixing.playFile("reg_enemy.mp3")
 
     def update(self):
         self.player.update()
