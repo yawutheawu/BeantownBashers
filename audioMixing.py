@@ -16,7 +16,7 @@ def playFile(song):
     for i in range(0, length):
         print(i)
         if i in map[0]:
-            hit = beatTimer.inputBeat(map[1][0], (0.353*9))
+            hit = beatTimer.inputBeat(map[1][0], (0.353*3))
             if(hit):
                 hit = False
                 time.sleep(3)

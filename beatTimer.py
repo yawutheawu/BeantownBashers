@@ -7,12 +7,14 @@ def inputBeat(key, frame):
 	start = int(time() * 1000)
 	end = start + milli
 	print("Press: \'" + key + "\'")
+	p = False
 	while(start <= end):
-		ans = keyboard.is_pressed(key)
+		ans = keyboard.is_pressed(' ')
 		if(start >= end):
 			return False
-		if(ans):
+		if(ans and start <= end):
 			ans = False
+			print("Pressed")
 			return True
 
 		start = int(time() * 1000)
