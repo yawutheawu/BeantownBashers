@@ -1,3 +1,5 @@
+import audioMixing
+import beatTimer
 from settings import *
 import pygame as pg
 import math
@@ -41,7 +43,7 @@ class Player:
 
     def single_fire_event(self, event):
         if event.type == pg.KEYDOWN:
-            if event.key == pg.K_SPACE and not self.shot and not self.game.weapon.reloading:
+            if event.key == pg.K_SPACE and not self.shot and not self.game.weapon.reloading and beatTimer.isOnTime(audioMixing.getGlobalTime()):
                 self.game.sound.shotgun.play()
                 self.shot = True
                 self.game.weapon.reloading = True
