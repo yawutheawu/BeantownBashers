@@ -42,6 +42,3 @@ def playFile(song):
             index += 1
     return True
 
-
-x = playFile("reg_enemy.mp3")
-

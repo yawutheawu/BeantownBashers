@@ -38,7 +38,7 @@ class Game:
         self.weapon = Weapon(self)
         self.sound = Sound(self)
         self.pathfinding = PathFinding(self)
-        audioMixing.playFile("boss.mp3")
+        audioMixing.playFile("resources/sound/boss.mp3")
 
     def update(self):
         self.player.update()
