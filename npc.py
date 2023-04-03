@@ -15,9 +15,9 @@ class NPC(AnimatedSprite):
         self.attack_dist = randint(2, 4)
         self.speed = 0.03
         self.size = 20
-        self.health = 60
-        self.attack_damage = 10
-        self.accuracy = 0.15
+        self.health = 45
+        self.attack_damage = 5
+        self.accuracy = 0.13
         self.alive = True
         self.pain = False
         self.ray_cast_value = False
