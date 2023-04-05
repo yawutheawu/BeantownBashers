@@ -11,13 +11,13 @@ def isPath(arr):
     # queue
     q = []
     # insert the top right corner.
-    q.append((0, 0))
+    q.append((1,1))
     # until queue is empty
     while(len(q) > 0) :
         p = q[0]
         q.pop(0)
         # mark as visited
-        arr[p[0]][p[1]] = -1
+        arr[p[0]][p[1]] = 1
         # destination is reached.
         if(p == (len(arr) - 1, len(arr[0]) - 1)) :
             return True 
@@ -27,27 +27,29 @@ def isPath(arr):
             a = p[0] + Dir[i][0]
             b = p[1] + Dir[i][1]
             # not blocked and valid
-            if(a >= 0 and b >= 0 and a < len(arr) and b < len(arr[0]) and arr[a][b] != -1) :           
+            if(a >= 0 and b >= 0 and a < len(arr) and b < len(arr[0]) and arr[a][b] != 1) :           
                 q.append((a, b))
     return False
 
 
 pos_map = []
 x = []
-for i in range(6,map_y-1):
+for i in range(0,map_x):
+    x.append(4)
+pos_map.append(x)
+for i in range(0,map_y):
     x=[]
-    for i in range(5,map_x):
-        if i ==5 or i == map_x:
+    for j in range(0,map_x):
+        if j ==0 or j == map_x:
             x.append(4)
         else:
             randNum = rand.randrange(0,2)
             x.append(randNum)
     pos_map.append(x)
-
 while not isPath(pos_map):
     pos_map = []
     x = []
-    for i in range(6,map_y-1):
+    for i in range(6,map_y):
         x=[]
         for i in range(5,map_x):
             if i ==5 or i == map_x:
@@ -68,7 +70,10 @@ for i in pos_map:
         else:
             x.append(j)
     mini_map.append(x)
-
+x = []
+for i in range(0,map_x):
+    x.append(4)
+mini_map.append(x)
 print(mini_map)
 
 class Map:
