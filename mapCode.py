@@ -17,7 +17,7 @@ def isPath(arr):
         p = q[0]
         q.pop(0)
         # mark as visited
-        arr[p[0]][p[1]] = 1
+        arr[p[0]][p[1]] = -1
         # destination is reached.
         if(p == (len(arr) - 1, len(arr[0]) - 1)) :
             return True 
@@ -46,6 +46,9 @@ for i in range(0,map_y):
             randNum = rand.randrange(0,2)
             x.append(randNum)
     pos_map.append(x)
+for i in range(0,map_x):
+    x.append(4)
+pos_map.append(x)
 while not isPath(pos_map):
     pos_map = []
     x = []
@@ -58,6 +61,9 @@ while not isPath(pos_map):
                 randNum = rand.randrange(0,2)
                 x.append(randNum)
         pos_map.append(x)
+    for i in range(0,map_x):
+        x.append(4)
+    pos_map.append(x)
 
 mini_map = []
 for i in pos_map:
@@ -71,10 +77,9 @@ for i in pos_map:
             x.append(j)
     mini_map.append(x)
 x = []
-for i in range(0,map_x):
-    x.append(4)
-mini_map.append(x)
-print(mini_map)
+
+for i in mini_map:
+    print(i)
 
 class Map:
     def __init__(self, game):
