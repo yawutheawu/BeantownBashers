@@ -1,7 +1,7 @@
 import pygame as pg
 import sys
 from settings import *
-from map import *
+from mapCode import *
 from player import *
 from raycasting import *
 from object_renderer import *
@@ -47,7 +47,7 @@ class Game:
         self.weapon.update()
         pg.display.flip()
         self.delta_time = self.clock.tick(FPS)
-        pg.display.set_caption(f'{self.clock.get_fps() :.1f}')
+        pg.display.set_caption('BeanDOOM')
 
     def draw(self):
         # self.screen.fill('black')
@@ -75,4 +75,5 @@ class Game:
 
 if __name__ == '__main__':
     game = Game()
+    pg.display.set_caption('BeanDOOM')
     game.run()

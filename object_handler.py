@@ -1,6 +1,7 @@
 from sprite_object import *
 from npc import *
 from random import choices, randrange
+import mapCode
 
 
 class ObjectHandler:
@@ -18,7 +19,7 @@ class ObjectHandler:
         # spawn npc
         self.enemies = 15  # npc count
         self.npc_types = [SoldierNPC]
-        self.restricted_area = {(i, j) for i in range(10) for j in range(10)}
+        self.restricted_area = {(i, j) for i in range(mapCode.map_x) for j in range(mapCode.map_y)}
         self.spawn_npc()
 
         # sprite map
